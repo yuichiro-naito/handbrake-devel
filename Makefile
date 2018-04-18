@@ -1,8 +1,8 @@
 # Created by: Andrew Thompson <andy@fud.org.nz>
 # $FreeBSD: head/multimedia/handbrake/Makefile 467738 2018-04-18 21:32:33Z fernape $
 
-PORTNAME=	handbrake
-DISTVERSION=	1.1.0
+PORTNAME=	handbrake-devel
+DISTVERSION=	1.1.1
 CATEGORIES=	multimedia
 DIST_SUBDIR=	${PORTNAME}
 
@@ -12,6 +12,7 @@ COMMENT=	Versatile DVD ripper and video transcoder
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+CONFLICTS=	multimedia/handbrake
 ONLY_FOR_ARCHS=	amd64 i386
 
 BUILD_DEPENDS=	bash:shells/bash \
@@ -58,6 +59,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
+GH_TAGNAME=	15d861d9d3930328082c84645c09e55b77bb95cc
 
 USE_GCC=	yes
 
