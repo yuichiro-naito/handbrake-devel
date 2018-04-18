@@ -25,6 +25,7 @@ BEFORE MAKE A UPDATE PATCH TO PORTS TREE.
 2. delete CONFLICTS.
 3. delete GH_TAGNAME.
 4. update `files/patch-version.txt`.
+5. update distinfo.
 
 Copy all files to `ports/multimedia/handbrake` except `README.md`.
 Check which files are added and/or deleted.
