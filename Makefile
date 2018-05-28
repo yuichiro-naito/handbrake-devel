@@ -41,8 +41,8 @@ CONTRIB_FILES=	fdk-aac-0.1.5.tar.gz \
 		libbluray-1.0.2.tar.bz2 \
 		libdvdnav-5.0.3.tar.bz2 \
 		libdvdread-5.0.3.tar.bz2 \
-		libvpx-1.6.1.tar.bz2 \
-		x265_2.6.tar.gz
+		libvpx-1.7.0.tar.gz \
+		x265_2.8.tar.gz
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
 
@@ -59,7 +59,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	e845711c6fce01a393bde81541462903a63b749a
+GH_TAGNAME=	fd2241a344b141fb5f1b8ec479dbb5783826f1ce
 
 USE_GCC=	yes
 
