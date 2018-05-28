@@ -1,5 +1,5 @@
 # Created by: Andrew Thompson <andy@fud.org.nz>
-# $FreeBSD: head/multimedia/handbrake/Makefile 467738 2018-04-18 21:32:33Z fernape $
+# $FreeBSD: head/multimedia/handbrake/Makefile 470133 2018-05-16 17:19:18Z fernape $
 
 PORTNAME=	handbrake-devel
 DISTVERSION=	1.1.1
@@ -14,6 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	multimedia/handbrake
 ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
 BUILD_DEPENDS=	bash:shells/bash \
 		yasm:devel/yasm \
