@@ -2,7 +2,7 @@
 # $FreeBSD: head/multimedia/handbrake/Makefile 467738 2018-04-18 21:32:33Z fernape $
 
 PORTNAME=	handbrake-devel
-DISTVERSION=	1.1.1
+DISTVERSION=	1.2.0
 CATEGORIES=	multimedia
 DIST_SUBDIR=	${PORTNAME}
 
@@ -25,6 +25,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libfribidi.so:converters/fribidi \
 		libxml2.so:textproc/libxml2 \
 		libass.so:multimedia/libass \
+		libspeex.so:audio/speex \
 		libogg.so:audio/libogg \
 		libvorbis.so:audio/libvorbis \
 		libvorbisenc.so:audio/libvorbis \
@@ -37,7 +38,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libjansson.so:devel/jansson
 
 CONTRIB_FILES=	fdk-aac-0.1.5.tar.gz \
-		libav-12.3.tar.gz \
+		ffmpeg-4.0.tar.bz2 \
 		libbluray-1.0.2.tar.bz2 \
 		libdvdnav-5.0.3.tar.bz2 \
 		libdvdread-5.0.3.tar.bz2 \
@@ -59,7 +60,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	fd2241a344b141fb5f1b8ec479dbb5783826f1ce
+GH_TAGNAME=	49f21c9596d91e742f2b2f4a5d5623f6c73ad506
 
 USE_GCC=	yes
 
