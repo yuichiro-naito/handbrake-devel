@@ -17,7 +17,7 @@ ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
 BUILD_DEPENDS=	bash:shells/bash \
-		yasm:devel/yasm \
+		nasm:devel/nasm \
 		cmake:devel/cmake
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libharfbuzz.so:print/harfbuzz \
@@ -61,7 +61,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	49f21c9596d91e742f2b2f4a5d5623f6c73ad506
+GH_TAGNAME=	6487eed887835f5c65027aa1ebb37bb6f73de1c6
 
 USE_GCC=	yes
 
