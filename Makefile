@@ -39,7 +39,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libjansson.so:devel/jansson
 
 CONTRIB_FILES=	fdk-aac-0.1.5.tar.gz \
-		ffmpeg-4.0.tar.bz2 \
+		ffmpeg-4.0.1.tar.bz2 \
 		libbluray-1.0.2.tar.bz2 \
 		libdvdnav-5.0.3.tar.bz2 \
 		libdvdread-5.0.3.tar.bz2 \
@@ -61,7 +61,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	c6fec7b5b7246fcc5c94a5febc7565176b96e580
+GH_TAGNAME=	7a2b06d19503175c79fdbee353d6a1149cd72349
 
 USE_GCC=	yes
 
