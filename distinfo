@@ -1,4 +1,4 @@
-TIMESTAMP = 1529751940
+TIMESTAMP = 1534939360
 SHA256 (handbrake-devel/fdk-aac-0.1.5.tar.gz) = 2164592a67b467e5b20fdcdaf5bd4c50685199067391c6fcad4fa5521c9b4dd7
 SIZE (handbrake-devel/fdk-aac-0.1.5.tar.gz) = 2091081
 SHA256 (handbrake-devel/ffmpeg-4.0.1.tar.bz2) = 7ee591b1e7fb66f055fa514fbd5d98e092ddb3dbe37d2e50ea5c16ab51c21670
@@ -13,5 +13,5 @@ SHA256 (handbrake-devel/libvpx-1.7.0.tar.gz) = 1fec931eb5c94279ad219a5b6e0202358
 SIZE (handbrake-devel/libvpx-1.7.0.tar.gz) = 2679797
 SHA256 (handbrake-devel/x265_2.8.tar.gz) = 6e59f9afc0c2b87a46f98e33b5159d56ffb3558a49d8e3d79cb7fdc6b7aaa863
 SIZE (handbrake-devel/x265_2.8.tar.gz) = 1379551
-SHA256 (handbrake-devel/HandBrake-HandBrake-1.2.0-7a2b06d19503175c79fdbee353d6a1149cd72349_GH0.tar.gz) = 1f08f186b7815f8d6e267ae49512880975725ba4b795ba0b303f12aab71ef3f7
-SIZE (handbrake-devel/HandBrake-HandBrake-1.2.0-7a2b06d19503175c79fdbee353d6a1149cd72349_GH0.tar.gz) = 18032201
+SHA256 (handbrake-devel/HandBrake-HandBrake-1.2.0-b703c42420c4e832d86596c2cd9194ea4644b3c3_GH0.tar.gz) = cd789384f0e85c63dfbe3de0ea77587d883f052f387f686ea1bba58ab112b9cd
+SIZE (handbrake-devel/HandBrake-HandBrake-1.2.0-b703c42420c4e832d86596c2cd9194ea4644b3c3_GH0.tar.gz) = 18435472

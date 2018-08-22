@@ -12,7 +12,6 @@ COMMENT=	Versatile DVD ripper and video transcoder
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-CONFLICTS=	multimedia/handbrake
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
@@ -48,6 +47,8 @@ CONTRIB_FILES=	fdk-aac-0.1.5.tar.gz \
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
 
+CONFLICTS=	multimedia/handbrake
+
 .if !defined(PACKAGE_BUILDING)
 # DVDCSS version hardcoded in contrib/libdvdread/libdvdread-5.0.0-6-gcb1ae87/src/dvd_input.c (dlopen'ed)
 LIB_DEPENDS+=	libdvdcss.so:multimedia/libdvdcss
@@ -61,9 +62,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	7a2b06d19503175c79fdbee353d6a1149cd72349
-
-USE_GCC=	yes
+GH_TAGNAME=	b703c42420c4e832d86596c2cd9194ea4644b3c3
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
@@ -102,7 +101,6 @@ X11_CONFIGURE_ENV=	COMPILER_PATH=${LOCALBASE}/bin
 X11_MAKE_ENV=	COMPILER_PATH=${LOCALBASE}/bin
 X11_CONFIGURE_ON=	--disable-gtk-update-checks
 X11_CONFIGURE_OFF=	--disable-gtk
-X11_BUILD_DEPENDS=	${LOCALBASE}/bin/ld:devel/binutils
 X11_LIB_DEPENDS=	libvpx.so:multimedia/libvpx \
 			libnotify.so:devel/libnotify
 X11_USES=	gettext desktop-file-utils
