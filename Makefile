@@ -114,6 +114,8 @@ post-extract: .SILENT
 .for f in ${CONTRIB_FILES}
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${f} ${WRKSRC}/download
 .endfor
+	${CP} ${FILESDIR}/version.txt ${WRKSRC}
+	${CP} ${FILESDIR}/P00-freebsd-libavutil-x86-asm-h.patch ${WRKSRC}/contrib/ffmpeg
 
 post-patch:
 	@${REINPLACE_CMD} 's@python2 @${PYTHON_CMD} @' \
