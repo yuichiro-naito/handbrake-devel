@@ -114,8 +114,11 @@ post-extract: .SILENT
 .for f in ${CONTRIB_FILES}
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${f} ${WRKSRC}/download
 .endfor
+# Install version information.
 	${CP} ${FILESDIR}/version.txt ${WRKSRC}
+# Following patches reduces warnings with clang.
 	${CP} ${FILESDIR}/P00-freebsd-libavutil-x86-asm-h.patch ${WRKSRC}/contrib/ffmpeg
+	${CP} ${FILESDIR}/P01-freebsd-ifo_types.h.patch ${WRKSRC}/contrib/libdvdread
 
 post-patch:
 	@${REINPLACE_CMD} 's@python2 @${PYTHON_CMD} @' \
