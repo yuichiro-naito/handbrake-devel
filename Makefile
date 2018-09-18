@@ -62,7 +62,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	6deb3a30f9b9df04cecbddbe0c8aafec08d0bc22
+GH_TAGNAME=	1d109f9120ba8e7886fdcdaf473273ee0db9999b
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
