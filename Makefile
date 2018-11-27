@@ -38,12 +38,12 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libjansson.so:devel/jansson
 
 CONTRIB_FILES=	fdk-aac-0.1.5.tar.gz \
-		ffmpeg-4.0.1.tar.bz2 \
+		ffmpeg-4.1.tar.bz2 \
 		libbluray-1.0.2.tar.bz2 \
 		libdvdnav-6.0.0.tar.bz2 \
 		libdvdread-6.0.0.tar.bz2 \
 		libvpx-1.7.0.tar.gz \
-		x265_2.8.tar.gz
+		x265_2.9.tar.gz
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
 
@@ -62,7 +62,7 @@ MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	46598fde8cec433cd93798f46045a628734eca13
+GH_TAGNAME=	e6081d225f352e15ad6cb8752ae07b648758cb48
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
