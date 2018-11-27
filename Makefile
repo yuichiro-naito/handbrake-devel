@@ -78,9 +78,6 @@ NOPRECIOUSMAKEVARS=	yes			# for ffmpeg and x264
 # Enforce linking to bundled libraries instead of system libraries
 LDFLAGS+=	-L${BUILD_WRKSRC}/contrib/lib
 
-# Enforce linking to the system c++ standard lib
-LDFLAGS+=	-l${COMPILER_FEATURES:Mlib*c++:S/lib//}
-
 OPTIONS_DEFINE=		FDK_AAC X11
 OPTIONS_DEFAULT=	X11
 
