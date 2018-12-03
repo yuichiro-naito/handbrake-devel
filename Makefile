@@ -117,10 +117,6 @@ post-extract: .SILENT
 	${CP} ${FILESDIR}/P00-freebsd-libavutil-x86-asm-h.patch ${WRKSRC}/contrib/ffmpeg
 	${CP} ${FILESDIR}/P01-freebsd-ifo_types.h.patch ${WRKSRC}/contrib/libdvdread
 
-post-patch:
-	@${REINPLACE_CMD} 's@python2 @${PYTHON_CMD} @' \
-		${WRKSRC}/gtk/src/Makefile.am
-
 post-install-X11-on:
 	${LN} -sf ghb ${STAGEDIR}${PREFIX}/bin/HandBrake
 
