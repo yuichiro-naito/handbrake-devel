@@ -92,8 +92,6 @@ LICENSE_NAME_FDK_AAC=		Software License for The Fraunhofer FDK AAC Codec Library
 LICENSE_FILE_FDK_AAC=		${WRKDIR}/${DISTFILES:Mfdk*:R:R}/NOTICE
 LICENSE_PERMS_FDK_AAC=		dist-mirror pkg-mirror auto-accept
 
-# Recent GNU binutils are required to handle inline SSSE3 asm (in x264), and
-# to support --exclude-libs option for ld(1) when building GUI program
 X11_CONFIGURE_ENV=	COMPILER_PATH=${LOCALBASE}/bin
 X11_MAKE_ENV=	COMPILER_PATH=${LOCALBASE}/bin
 X11_CONFIGURE_ON=	--disable-gtk-update-checks
