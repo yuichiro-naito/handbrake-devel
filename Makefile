@@ -37,14 +37,16 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libopus.so:audio/opus \
 		libjansson.so:devel/jansson
 
-CONTRIB_FILES=	fdk-aac-0.1.5.tar.gz \
-		ffmpeg-4.1.tar.bz2 \
+CONTRIB_FILES=	fdk-aac-0.1.6.tar.gz \
+		ffmpeg-4.1.1.tar.bz2 \
 		libbluray-1.0.2.tar.bz2 \
 		libdvdnav-6.0.0.tar.bz2 \
 		libdvdread-6.0.0.tar.bz2 \
 		libvpx-1.7.0.tar.gz \
-		x265_2.9.tar.gz
-MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
+		x265_3.0.tar.gz
+MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib \
+		https://sourceforge.net/projects/opencore-amr/files/fdk-aac/:contrib
+
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
 
 CONFLICTS=	multimedia/handbrake
@@ -56,13 +58,13 @@ LIB_DEPENDS+=	libdvdcss.so:multimedia/libdvdcss
 
 GNU_CONFIGURE=	yes
 USES=		autoreconf:build compiler:features gmake iconv \
-		libtool:build localbase:ldflags pkgconfig python:2.7,build
+		libtool:build localbase:ldflags pkgconfig python:3,build
 MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	557a3311639315422e71145038d617e4d9e49dcd
+GH_TAGNAME=	f60354ef7ece3c69a0c6e83021778c28270b2880
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
