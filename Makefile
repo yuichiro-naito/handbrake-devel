@@ -17,7 +17,8 @@ ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
 BUILD_DEPENDS=	bash:shells/bash \
 		nasm:devel/nasm \
-		cmake:devel/cmake
+		cmake:devel/cmake \
+		python3:lang/python3
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -58,7 +59,7 @@ LIB_DEPENDS+=	libdvdcss.so:multimedia/libdvdcss
 
 GNU_CONFIGURE=	yes
 USES=		autoreconf:build compiler:features gmake iconv \
-		libtool:build localbase:ldflags pkgconfig python:3,build
+		libtool:build localbase:ldflags pkgconfig python:3.6+,build
 MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 
 USE_GITHUB=	yes
