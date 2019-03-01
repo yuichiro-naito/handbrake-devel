@@ -40,9 +40,9 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 
 CONTRIB_FILES=	fdk-aac-0.1.6.tar.gz \
 		ffmpeg-4.1.1.tar.bz2 \
-		libbluray-1.0.2.tar.bz2 \
+		libbluray-1.1.0.tar.bz2 \
 		libdvdnav-6.0.0.tar.bz2 \
-		libdvdread-6.0.0.tar.bz2 \
+		libdvdread-6.0.1.tar.bz2 \
 		libvpx-1.7.0.tar.gz \
 		x265_3.0.tar.gz
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib \
