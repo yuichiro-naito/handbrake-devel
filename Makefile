@@ -33,16 +33,16 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libtheoraenc.so:multimedia/libtheora \
 		libsamplerate.so:audio/libsamplerate \
 		libx264.so:multimedia/libx264 \
+		libvpx.so:multimedia/libvpx \
 		libmp3lame.so:audio/lame \
 		libopus.so:audio/opus \
 		libjansson.so:devel/jansson
 
 CONTRIB_FILES=	fdk-aac-0.1.6.tar.gz \
-		ffmpeg-4.1.1.tar.bz2 \
+		ffmpeg-4.1.3.tar.bz2 \
 		libbluray-1.1.0.tar.bz2 \
 		libdvdnav-6.0.0.tar.bz2 \
 		libdvdread-6.0.1.tar.bz2 \
-		libvpx-1.7.0.tar.gz \
 		x265_3.0.tar.gz
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib \
 		https://sourceforge.net/projects/opencore-amr/files/fdk-aac/:contrib
@@ -66,7 +66,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	c8f016b43413fd902d7073e6c6e5a54e57674974
+GH_TAGNAME=	c543e6e3171954ccb5fdcc2003e30d79b6fb5b82
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
