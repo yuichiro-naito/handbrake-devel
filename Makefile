@@ -43,7 +43,7 @@ CONTRIB_FILES=	fdk-aac-0.1.6.tar.gz \
 		libbluray-1.1.0.tar.bz2 \
 		libdvdnav-6.0.0.tar.bz2 \
 		libdvdread-6.0.1.tar.bz2 \
-		x265_3.1.1.tar.gz
+		x265_3.1.2.tar.gz
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib \
 		https://sourceforge.net/projects/opencore-amr/files/fdk-aac/:contrib
 
@@ -66,7 +66,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	8b079d9d8900b5e410ae77e787483dabf4e9ad6a
+GH_TAGNAME=	fde77ab8b07ffeaeb1b6b0bd6e765688ae5207b1
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
