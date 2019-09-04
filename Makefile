@@ -39,7 +39,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libjansson.so:devel/jansson
 
 CONTRIB_FILES=	fdk-aac-0.1.6.tar.gz \
-		ffmpeg-4.1.3.tar.bz2 \
+		ffmpeg-4.2.tar.bz2 \
 		libbluray-1.1.0.tar.bz2 \
 		libdvdnav-6.0.0.tar.bz2 \
 		libdvdread-6.0.1.tar.bz2 \
@@ -66,7 +66,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	fde77ab8b07ffeaeb1b6b0bd6e765688ae5207b1
+GH_TAGNAME=	a7c69adc115b9b25680061284f614329072502f7
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
