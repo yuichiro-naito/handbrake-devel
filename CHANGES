@@ -1,7 +1,6 @@
 Changes since 1.2.2:
   - fix warnings of portlint
-      1. USES line more earlier
-      2. add NLS_USES
+      - USES line more earlier
   - change to use libvpx from port
       It is upstream's decision.
   - update contrib libraries
