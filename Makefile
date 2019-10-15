@@ -47,8 +47,7 @@ CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
 		libdvdnav-6.0.1.tar.bz2 \
 		libdvdread-6.0.2.tar.bz2 \
 		x265_3.2.tar.gz
-MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib \
-		https://sourceforge.net/projects/opencore-amr/files/fdk-aac/:contrib
+MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
 
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
 
