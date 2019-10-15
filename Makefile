@@ -38,6 +38,9 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libopus.so:audio/opus \
 		libjansson.so:devel/jansson
 
+USES=		autoreconf:build compiler:features gmake iconv \
+		libtool:build localbase:ldflags pkgconfig python:3.6+,build
+
 CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
 		ffmpeg-4.2.1.tar.bz2 \
 		libbluray-1.1.2.tar.bz2 \
@@ -57,8 +60,6 @@ LIB_DEPENDS+=	libdvdcss.so:multimedia/libdvdcss
 .endif
 
 GNU_CONFIGURE=	yes
-USES=		autoreconf:build compiler:features gmake iconv \
-		libtool:build localbase:ldflags pkgconfig python:3.6+,build
 MAKE_ENV=	V=1 ACLOCAL=${LOCALBASE}/bin/aclocal
 
 BINARY_ALIAS=   python3=${PYTHON_VERSION}
