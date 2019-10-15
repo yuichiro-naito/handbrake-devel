@@ -17,7 +17,8 @@ ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
 
 BUILD_DEPENDS=	bash:shells/bash \
 		nasm:devel/nasm \
-		cmake:devel/cmake
+		cmake:devel/cmake \
+		meson:devel/meson
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig \
