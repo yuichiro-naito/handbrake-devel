@@ -24,10 +24,10 @@ BEFORE MAKE A UPDATE PATCH TO PORTS TREE.
 1. change PORTNAME to 'handbrake'.
 2. delete CONFLICTS.
 3. delete GH_TAGNAME.
-4. update `files/patch-version.txt`.
+4. update `files/version.txt`.
 5. update distinfo.
 
-Copy all files to `ports/multimedia/handbrake` except `README.md`.
+Copy all files to `ports/multimedia/handbrake` except `README.md` and `CHANGES`.
 Check which files are added and/or deleted.
 Mark added files by svn add.
 Mark deleted files by svn del.
