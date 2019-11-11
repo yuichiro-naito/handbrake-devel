@@ -32,7 +32,6 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libvorbisenc.so:audio/libvorbis \
 		libtheoradec.so:multimedia/libtheora \
 		libtheoraenc.so:multimedia/libtheora \
-		libsamplerate.so:audio/libsamplerate \
 		libx264.so:multimedia/libx264 \
 		libvpx.so:multimedia/libvpx \
 		libmp3lame.so:audio/lame \

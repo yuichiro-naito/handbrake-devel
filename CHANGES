@@ -3,6 +3,8 @@ Changes since 1.2.2:
       - USES line more earlier
   - change to use libvpx from Ports
       It is upstream's decision.
+  - removed dependency
+      libramplerate
   - update contrib libraries
       fdk-aac 2.0.1
       ffmpeg 4.2.1
