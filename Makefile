@@ -2,7 +2,7 @@
 # $FreeBSD: head/multimedia/handbrake/Makefile 470133 2018-05-16 17:19:18Z fernape $
 
 PORTNAME=	handbrake-devel
-DISTVERSION=	1.2.2
+DISTVERSION=	1.3.0
 CATEGORIES=	multimedia
 DIST_SUBDIR=	${PORTNAME}
 
@@ -47,8 +47,8 @@ CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
 		libbluray-1.1.2.tar.bz2 \
 		libdvdnav-6.0.1.tar.bz2 \
 		libdvdread-6.0.2.tar.bz2 \
-		dav1d-0.5.0.tar.bz2 \
-		x265_3.2.tar.gz
+		dav1d-0.5.1.tar.bz2 \
+		x265_3.2.1.tar.gz
 MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
 
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
@@ -68,7 +68,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	202c8f7145d210c86a149106046ceb9d966e6e27
+GH_TAGNAME=	4672248655ddd687161bacdb539c208abde15c59
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build

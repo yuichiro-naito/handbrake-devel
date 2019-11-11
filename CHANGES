@@ -1,7 +1,7 @@
 Changes since 1.2.2:
   - fix portlint warning
       - USES line more earlier
-  - change to use libvpx from port
+  - change to use libvpx from Ports
       It is upstream's decision.
   - update contrib libraries
       fdk-aac 2.0.1
@@ -9,8 +9,8 @@ Changes since 1.2.2:
       libbluray 1.1.2
       libdvdnav 6.0.1
       libdvdread 6.0.2
-      dav1d-0.5.0.tar.bz2
-      x265 3.2
+      dav1d 0.5.1
+      x265 3.2.1
   - python3 support for building.
   - add build dependency of devel/meson.
   - pkg-decr mentions about VP8, VP9 video codecs.
