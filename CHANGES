@@ -14,11 +14,13 @@ Changes since 1.2.2:
       dav1d 0.5.1
       x265 3.2.1
   - python3 support for building.
-  - add build dependency of devel/meson.
+  - added build dependency of devel/meson.
   - pkg-decr mentions about VP8, VP9 video codecs.
+  - pkg-plist includes new message catalogs
+  - workaround 'patch-gtk_src_Makefile.am' for switching message catalogs by locale
 
 Notes for reviewers:
-  - USES+=meson adds extra configure options that HandBrake's configure 
+  - USES+=meson adds extra configure options that HandBrake's configure
     never understand. Meson dependency should be in BUILD_DEPENDS.
   - Portlint warns about consider using NLS knob. But HandBrake always requires
     gettext with X11. It's not selectable, so NLS should not be in OPTIONS_DEFINE.
