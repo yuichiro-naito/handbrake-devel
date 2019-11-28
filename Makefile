@@ -12,8 +12,7 @@ COMMENT=	Versatile DVD ripper and video transcoder
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-ONLY_FOR_ARCHS=	amd64 i386
-ONLY_FOR_ARCHS_REASON=	invokes x86 assembler
+ONLY_FOR_ARCHS=	amd64 i386 powerpc64
 
 BUILD_DEPENDS=	bash:shells/bash \
 		nasm:devel/nasm \
