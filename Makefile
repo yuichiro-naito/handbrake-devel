@@ -37,7 +37,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libopus.so:audio/opus \
 		libjansson.so:devel/jansson
 
-USES=		autoreconf:build compiler:features gmake iconv \
+USES=		autoreconf:build compiler:c11 gmake iconv \
 		libtool:build localbase:ldflags pkgconfig python:3.6+,build
 
 CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
@@ -118,6 +118,9 @@ post-extract: .SILENT
 # Following patches reduces warnings with clang.
 	${CP} ${FILESDIR}/P00-freebsd-libavutil-x86-asm-h.patch ${WRKSRC}/contrib/ffmpeg
 	${CP} ${FILESDIR}/P01-freebsd-ifo_types.h.patch ${WRKSRC}/contrib/libdvdread
+# for powerpc64.
+# picked from multimedia/ffmpeg/files/patch-libswscale_ppc_swscale__altivec.c
+	${CP} ${FILESDIR}/P02-freebsd-ppc-libswscale.patch ${WRKSRC}/contrib/ffmpeg
 
 post-install-X11-on:
 	${LN} -sf ghb ${STAGEDIR}${PREFIX}/bin/HandBrake
