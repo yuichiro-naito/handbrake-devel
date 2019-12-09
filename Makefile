@@ -107,7 +107,7 @@ X11_USE=	gstreamer1=gdkpixbuf,libav \
 		gnome=gtk30,intltool,cairo,gdkpixbuf2
 
 # HandBrake tries to fetch its dependencies during build phase, which is not
-# considered good in FreeBSD.  Instead, we will provided the downloaded files.
+# considered good in FreeBSD.  Instead, we will provide the downloaded files.
 post-extract: .SILENT
 	${MKDIR} ${WRKSRC}/download
 .for f in ${CONTRIB_FILES}
