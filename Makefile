@@ -1,9 +1,8 @@
 # Created by: Andrew Thompson <andy@fud.org.nz>
-# $FreeBSD: head/multimedia/handbrake/Makefile 521913 2020-01-03 09:01:24Z jbeich $
+# $FreeBSD: head/multimedia/handbrake/Makefile 522185 2020-01-06 02:00:16Z pkubaj $
 
 PORTNAME=	handbrake
-DISTVERSION=	1.3.0
-PORTREVISION=	2
+DISTVERSION=	1.3.1
 CATEGORIES=	multimedia
 DIST_SUBDIR=	${PORTNAME}
 
@@ -42,7 +41,7 @@ USES=		autoreconf:build compiler:c11 gmake iconv \
 		libtool:build localbase:ldflags pkgconfig python:3.6+,build
 
 CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
-		ffmpeg-4.2.1.tar.bz2 \
+		ffmpeg-4.2.2.tar.bz2 \
 		libbluray-1.1.2.tar.bz2 \
 		libdvdnav-6.0.1.tar.bz2 \
 		libdvdread-6.0.2.tar.bz2 \
