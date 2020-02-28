@@ -47,7 +47,7 @@ CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
 		libdvdread-6.0.2.tar.bz2 \
 		dav1d-0.5.1.tar.bz2 \
 		x265_3.2.1.tar.gz
-MASTER_SITES+=	https://download.handbrake.fr/contrib/:contrib
+MASTER_SITES+=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/:contrib
 
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
 
