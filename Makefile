@@ -19,6 +19,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 		cmake:devel/cmake \
 		meson:devel/meson
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+		libgudev-1.0.so.0.2.0:devel/libgudev \
 		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
