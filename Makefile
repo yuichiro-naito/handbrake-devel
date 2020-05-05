@@ -2,7 +2,7 @@
 # $FreeBSD: head/multimedia/handbrake/Makefile 522185 2020-01-06 02:00:16Z pkubaj $
 
 PORTNAME=	handbrake-devel
-DISTVERSION=	1.3.1
+DISTVERSION=	1.3.2
 CATEGORIES=	multimedia
 DIST_SUBDIR=	${PORTNAME}
 
@@ -66,7 +66,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	81f919fadfb0eec4f243f75dca7287c7e95b9f25
+GH_TAGNAME=	a91adfa02ce544c84aa34e758b85f0967d005aa7
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
