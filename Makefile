@@ -19,11 +19,12 @@ BUILD_DEPENDS=	bash:shells/bash \
 		cmake:devel/cmake \
 		meson:devel/meson
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libgudev-1.0.so.0.2.0:devel/libgudev \
+		libgudev-1.0.so:devel/libgudev \
 		libharfbuzz.so:print/harfbuzz \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
 		libfribidi.so:converters/fribidi \
+		libturbojpeg.so:graphics/libjpeg-turbo \
 		libxml2.so:textproc/libxml2 \
 		libass.so:multimedia/libass \
 		libspeex.so:audio/speex \
@@ -67,7 +68,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	a91adfa02ce544c84aa34e758b85f0967d005aa7
+GH_TAGNAME=	a6c9b563bda71e7fa22f246ebc790522f5097891
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
