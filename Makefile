@@ -43,11 +43,11 @@ USES=		autoreconf:build compiler:c11 gmake iconv \
 		libtool:build localbase:ldflags pkgconfig python:3.6+,build
 
 CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
-		ffmpeg-4.2.3.tar.bz2 \
+		ffmpeg-4.3.1.tar.bz2 \
 		libbluray-1.1.2.tar.bz2 \
 		libdvdnav-6.0.1.tar.bz2 \
 		libdvdread-6.0.2.tar.bz2 \
-		dav1d-0.5.1.tar.bz2 \
+		dav1d-0.7.0.tar.bz2 \
 		x265_3.2.1.tar.gz
 MASTER_SITES+=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/:contrib
 
@@ -68,7 +68,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	65b784fcfcc40e5adac6375fc95466c0f2b062c7
+GH_TAGNAME=	32474ffae290dd82f233fe62d2dc39c47693e7a7
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
@@ -128,9 +128,6 @@ post-extract: .SILENT
 # Following patches reduces warnings with clang.
 	${CP} ${FILESDIR}/P00-freebsd-libavutil-x86-asm-h.patch ${WRKSRC}/contrib/ffmpeg
 	${CP} ${FILESDIR}/P01-freebsd-ifo_types.h.patch ${WRKSRC}/contrib/libdvdread
-# for powerpc64.
-# picked from multimedia/ffmpeg/files/patch-libswscale_ppc_swscale__altivec.c
-	${CP} ${FILESDIR}/P02-freebsd-ppc-libswscale.patch ${WRKSRC}/contrib/ffmpeg
 
 post-install-X11-on:
 	${LN} -sf ghb ${STAGEDIR}${PREFIX}/bin/HandBrake
