@@ -1,8 +1,7 @@
 # Created by: Andrew Thompson <andy@fud.org.nz>
-# $FreeBSD: head/multimedia/handbrake/Makefile 550343 2020-09-27 20:28:00Z linimon $
 
 PORTNAME=	handbrake-devel
-DISTVERSION=	1.3.3
+DISTVERSION=	1.4.0
 CATEGORIES=	multimedia
 DIST_SUBDIR=	${PORTNAME}
 
@@ -39,16 +38,18 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libopus.so:audio/opus \
 		libjansson.so:devel/jansson
 
-USES=		autoreconf:build compiler:c11 gmake iconv \
-		libtool:build localbase:ldflags pkgconfig python:3.6+,build
+USES=		autoreconf:build compiler:c11 gmake iconv libtool:build \
+		localbase:ldflags ninja:build pkgconfig python:3.6+,build
 
 CONTRIB_FILES=	fdk-aac-2.0.1.tar.gz \
-		ffmpeg-4.3.1.tar.bz2 \
-		libbluray-1.1.2.tar.bz2 \
-		libdvdnav-6.0.1.tar.bz2 \
-		libdvdread-6.0.2.tar.bz2 \
-		dav1d-0.7.0.tar.bz2 \
-		x265_3.2.1.tar.gz
+		ffmpeg-4.4.tar.bz2 \
+		libbluray-1.3.0.tar.bz2 \
+		libdvdnav-6.1.1.tar.bz2 \
+		libdvdread-6.1.1.tar.bz2 \
+		dav1d-0.9.0.tar.bz2 \
+		x265_3.5.tar.gz \
+		zimg-3.0.1.tar.gz
+
 MASTER_SITES+=	https://github.com/HandBrake/HandBrake-contribs/releases/download/contribs/:contrib
 
 DISTFILES+=	${CONTRIB_FILES:S/$/:contrib/}
@@ -68,7 +69,7 @@ BINARY_ALIAS=   python3=${PYTHON_VERSION}
 USE_GITHUB=	yes
 GH_ACCOUNT=	HandBrake
 GH_PROJECT=	HandBrake
-GH_TAGNAME=	138640255714b260d562176501e99bd0f8687e8e
+GH_TAGNAME=	a01549c9c96f4edaca2a01db1e7cc2488953126c
 
 CONFIGURE_ARGS=	--force --enable-x265
 CONFIGURE_TARGET=	build
@@ -120,14 +121,19 @@ X11_USE=	gstreamer1=gdkpixbuf,libav \
 # considered good in FreeBSD.  Instead, we will provide the downloaded files.
 post-extract: .SILENT
 	${MKDIR} ${WRKSRC}/download
-.for f in ${CONTRIB_FILES}
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/${f} ${WRKSRC}/download
-.endfor
+
+pre-configure:
+	cd ${DISTDIR}/${DIST_SUBDIR} && \
+	    ${INSTALL_DATA} ${CONTRIB_FILES} \
+	    ${WRKSRC}/download
 # Install version information.
 	${CP} ${FILESDIR}/version.txt ${WRKSRC}
 # Following patches reduces warnings with clang.
 	${CP} ${FILESDIR}/P00-freebsd-libavutil-x86-asm-h.patch ${WRKSRC}/contrib/ffmpeg
 	${CP} ${FILESDIR}/P01-freebsd-ifo_types.h.patch ${WRKSRC}/contrib/libdvdread
+# for powerpc64
+# picked from multimedia/ffmpeg/files/patch-libswscale_ppc_yuv2rgb__altivec.c
+	${CP} ${FILESDIR}/P02-freebsd-ppc-libswscale.patch ${WRKSRC}/contrib/ffmpeg
 
 post-install-X11-on:
 	${LN} -sf ghb ${STAGEDIR}${PREFIX}/bin/HandBrake
